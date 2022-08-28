@@ -30,6 +30,13 @@ constructor(id: string, opts: Omit<DIDDocument, "id"> = {})
 The class also has a few helper functions:
 ```ts
 /**
+ * Adds to a top level field in the document named `set`. Will create it, if
+ * it doesn't exist already.
+ * @throws Will throw if there exists an object in the set wth the same `id` as `item.id`
+ */
+addToSet(set: string, item: Record<string, any>): void
+
+/**
  * Add a new verification method to the document.
  * @throws Will throw if a method with the same ID already exists in the document
  * @param {Object} method
