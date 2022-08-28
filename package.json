@@ -1,0 +1,37 @@
+{
+  "name": "did-doc",
+  "version": "1.0.0",
+  "description": "DID Document creation library",
+  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "src",
+    "dist",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "microbundle --compress=false"
+  },
+  "keywords": [
+    "DID",
+    "document"
+  ],
+  "author": "Upkeep",
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "did-resolver": "^4.0.0"
+  }
+}
